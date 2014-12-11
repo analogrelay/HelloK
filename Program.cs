@@ -27,7 +27,13 @@ namespace HelloK {
                 platform = GetUnameValue("sr");
             }
 
-            AnsiConsole.Output.WriteLine("K is good!");
+            var art = 
+                "\x1b[33m   ___   _______  \x1b[34m  _  ____________" + Environment.NewLine +
+                "\x1b[33m  / _ | / __/ _ \\ \x1b[34m / |/ / __/_  __/" + Environment.NewLine +
+                "\x1b[33m / __ |_\\ \\/ ___/ \x1b[34m/    / _/  / /   " + Environment.NewLine +
+                "\x1b[33m/_/ |_/___/_/  \x1b[37m(_)\x1b[34m_/|_/___/ /_/    \x1b[39m";
+
+            AnsiConsole.Output.WriteLine(art);
             AnsiConsole.Output.WriteLine("\x1b[30mRuntime Framework:    \x1b[39m " + _env.RuntimeFramework.ToString());
             AnsiConsole.Output.WriteLine("\x1b[30mRuntime Version:      \x1b[39m " + Environment.Version.ToString());
             AnsiConsole.Output.WriteLine("\x1b[30mRuntime Kind:         \x1b[39m " + (Type.GetType("Mono.Runtime") != null ? "Mono" : "Microsoft"));
@@ -36,7 +42,7 @@ namespace HelloK {
             AnsiConsole.Output.WriteLine("\x1b[30mUser Name:            \x1b[39m " + Environment.UserName ?? "<null>");
             AnsiConsole.Output.WriteLine("\x1b[30mSystem Directory:     \x1b[39m " + Environment.SystemDirectory ?? "<null>");
             AnsiConsole.Output.WriteLine("\x1b[30mCurrent Directory:    \x1b[39m " + Environment.CurrentDirectory ?? "<null>");
-            AnsiConsole.Output.WriteLine();
+            AnsiConsole.Output.WriteLine("");
             AnsiConsole.Output.WriteLine(
                 "\x1b[1m" +
                 "\x1b[30mA" + 
